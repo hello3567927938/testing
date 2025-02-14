@@ -2506,4 +2506,10 @@ local treadmillToggle = Tabs.AutoStuff:CreateToggle("Tread Toggle", {
 				local treadInfo = treadmillPositions[selecttreadmill]
 				if treadInfo and game:GetService("Players").LocalPlayer.Agility.Value > treadInfo.req then
 					game.Players.LocalPlayer.Character.Humanoid:Move(Vector3.new(0, 0, 100))
-					game
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = treadInfo.pos
+					game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+				end
+			end
+		end)
+	end
+})"
